@@ -1,0 +1,8 @@
+# This is only for my VIMRC and GVIMRC files so ignore almost everything else
+*
+
+# Except these specific files...
+!.gitignore
+!vimrc
+!gvimrc
+!README.md

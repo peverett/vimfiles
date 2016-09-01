@@ -17,9 +17,9 @@ Download it from here: http://www.vim.org/
 ..* /.vim - on Linux
 5. Clone this repo there and you're halfway home. 
 
-'''
+```
 > git clone https://github.com/peverett/vimfiles.git 
-'''
+```
 
 ## Plugins & Tools
 

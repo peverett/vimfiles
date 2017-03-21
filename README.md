@@ -18,14 +18,21 @@ Download it from here: http://www.vim.org/
 5. Clone this repo there and you're halfway home. 
 
 ```
-> git clone https://github.com/peverett/vimfiles.git 
+> git clone https://github.com/peverett/vimfiles 
 ```
 
 ## Plugins & Tools
 
-1. Pathogen - start with this: https://github.com/tpope/vim-pathogen
-2. CTRLp.vim - fuzzy file finder and buffer navigation: https://kien.github.io/ctrlp.vim/
-3. CTags: http://ctags.sourceforge.net/
-3. cscope - win32 build: https://code.google.com/archive/p/cscope-win32/downloads
+Install the Vundle Plugin - https://github.com/VundleVim/Vundle.Vim
+
+The VIMRC then contains the plugins that I want, and keeps them up to date.
+
+So far...
+* CTRLp.vim - fuzzy file finder and buffer navigation: https://kien.github.io/ctrlp.vim/
+* Xoria256 - my favorite color scheme: https://github.com/vim-scripts/xoria256.vim
+
+For full VIM power mad crazyness install
+* CTags: http://ctags.sourceforge.net/
+* cscope - win32 build: https://code.google.com/archive/p/cscope-win32/downloads
 
 

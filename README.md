@@ -35,4 +35,7 @@ For full VIM power mad crazyness install
 * CTags: http://ctags.sourceforge.net/
 * cscope - win32 build: https://code.google.com/archive/p/cscope-win32/downloads
 
+To get some decent toolbar icons on Windows, it's worth replacing the bitmaps 
+with these:
+* https://github.com/istepura/vim-toolbar-icons-silk
 

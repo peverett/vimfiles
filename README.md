@@ -30,6 +30,8 @@ The VIMRC then contains the plugins that I want, and keeps them up to date.
 So far...
 * CTRLp.vim - fuzzy file finder and buffer navigation: https://kien.github.io/ctrlp.vim/
 * Xoria256 - my favorite color scheme: https://github.com/vim-scripts/xoria256.vim
+* ifdef-highlighting - useful for C: https://github.com/vim-scripts/ifdef-highlighting
+* Todo.txt (todotxt.com) list pluging: https://github.com/freitass/todo.txt-vim
 
 For full VIM power mad crazyness install
 * CTags: http://ctags.sourceforge.net/

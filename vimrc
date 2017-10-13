@@ -15,9 +15,13 @@ set rtp+=~/vimfiles/bundle/Vundle.vim
 call vundle#begin()
 
 " Let Vundle manage Vundle, required.
-Plugin 'VundleVim/Vundle.Vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-scripts/xoria256.vim'
+Plugin 'VundleVim/Vundle.Vim'                   " Keep Vundle upto date
+Plugin 'ctrlpvim/ctrlp.vim'                     " CtrlP FTW!
+Plugin 'vim-scripts/xoria256.vim'               " Favourite color scheme
+Plugin 'vim-scripts/ifdef-highlighting'         " Bloody useful for C
+Plugin 'dbeniamine/todo.txt-vim'                " todo.txt plugin
+
+"Type :PluginInstall
 
 " All plugins must be added before the following line
 call vundle#end()
@@ -134,28 +138,13 @@ if has('langmap') && exists('+langnoremap')
   " compatible).
   set langnoremap
 endif
-
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
-endif
-
-if has('langmap') && exists('+langnoremap')
-  " Prevent that the langmap option applies to characters that result from a
-  " mapping.  If unset (default), this may break plugins (but it's backward
-  " compatible).
-  set langnoremap
-endif
-
 "
 " Platform specific configuration options.
 "
 if has('win32')
 
   source $VIMRUNTIME/mswin.vim      " Go with the flow.
+  behave mswin
 
 else  " Assume this is Linux
     
@@ -164,3 +153,5 @@ else  " Assume this is Linux
 
 endif
 
+" Map the '\' key as the 'localleader' for the todo plugin.
+let maplocalleader="\\"

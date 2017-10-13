@@ -19,7 +19,7 @@ Plugin 'VundleVim/Vundle.Vim'                   " Keep Vundle upto date
 Plugin 'ctrlpvim/ctrlp.vim'                     " CtrlP FTW!
 Plugin 'vim-scripts/xoria256.vim'               " Favourite color scheme
 Plugin 'vim-scripts/ifdef-highlighting'         " Bloody useful for C
-Plugin 'dbeniamine/todo.txt-vim'                " todo.txt plugin
+Plugin 'freitass/todo.txt-vim'                  " todo.txt plugin
 
 "Type :PluginInstall
 

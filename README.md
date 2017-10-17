@@ -31,13 +31,10 @@ So far...
 * CTRLp.vim - fuzzy file finder and buffer navigation: https://kien.github.io/ctrlp.vim/
 * Xoria256 - my favorite color scheme: https://github.com/vim-scripts/xoria256.vim
 * ifdef-highlighting - useful for C: https://github.com/vim-scripts/ifdef-highlighting
-* Todo.txt (todotxt.com) list pluging: https://github.com/freitass/todo.txt-vim
+* Todo.txt (todotxt.com) list plugin: https://github.com/freitass/todo.txt-vim
+* Silk Toolbar Icons (nicer): https://github.com/istepura/vim-toolbar-icons-silk
 
 For full VIM power mad crazyness install
 * CTags: http://ctags.sourceforge.net/
 * cscope - win32 build: https://code.google.com/archive/p/cscope-win32/downloads
-
-To get some decent toolbar icons on Windows, it's worth replacing the bitmaps 
-with these:
-* https://github.com/istepura/vim-toolbar-icons-silk
 

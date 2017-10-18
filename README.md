@@ -25,9 +25,6 @@ C:\Users\Name
 > mkdir vimfiles
 
 C:\Users\Name
-> cd vimfiles
-
-C:\Users\Name
 > git clone https://github.com/peverett/vimfiles .\vimfiles
 
 C:\Users\Name

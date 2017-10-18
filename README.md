@@ -8,26 +8,51 @@ Download it from here: http://www.vim.org/
 
 ## Configuration
 
-1. VIM looks in various places for the VIMRC and GVIMRC files. ':version' to see
-   where.
-2. On windows it's worthwhile explicitely defining a HOME environment var.
+1. VIM looks in various places for the ```vimrc``` and ```gvimrc``` files. Use 
+```:version``` to see where.
+2. On Windows, it's worthwhile explicitely defining HOME as an Environment 
+Variable.
 3. Navigate to your home directory (~).
 4. Create a subdirectory for your vim config files
-..* \vimfiles - on Windows
-..* /.vim - on Linux
-5. Clone this repo there and you're halfway home. 
+    * ```\vimfiles``` - on Windows
+    * ```/.vim``` - on Linux
+5. Clone this repo and the Vundle Plugin there.
+6. Run vim the first time to install all the plugins.
 
+The following example is for Windows shell:
 ```
-> git clone https://github.com/peverett/vimfiles 
+C:\Users\Name
+> mkdir vimfiles
+
+C:\Users\Name
+> cd vimfiles
+
+C:\Users\Name
+> git clone https://github.com/peverett/vimfiles .\vimfiles
+
+C:\Users\Name
+> git clone https://github.com/VundleVim/Vundle.vim.git .\vimfiles\bundle\Vundle.vim 
+
+C:\Users\Name
+> vim +PluginInstall +qall
+```
+
+## Windows Specific Settings
+The example Vundle setup for the plugin, on github, is for Linux and uses the 
+```~/.vim``` directory . For MS Windows, change the ```vimrc``` 
+setup to invoke Vundle as follows:
+```
+
+set rtp+=$HOME/vimfiles/bundle/Vundle.vim
+call vundle#begin('$HOME/vimfiles/bundle')
+
 ```
 
 ## Plugins & Tools
 
-Install the Vundle Plugin - https://github.com/VundleVim/Vundle.Vim
+Obviously, the Vundle Plugin is primary - https://github.com/VundleVim/Vundle.Vim
 
-The VIMRC then contains the plugins that I want, and keeps them up to date.
-
-So far...
+Other plugins I use are:
 * CTRLp.vim - fuzzy file finder and buffer navigation: https://kien.github.io/ctrlp.vim/
 * Xoria256 - my favorite color scheme: https://github.com/vim-scripts/xoria256.vim
 * ifdef-highlighting - useful for C: https://github.com/vim-scripts/ifdef-highlighting

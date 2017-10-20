@@ -21,6 +21,7 @@ Plugin 'vim-scripts/xoria256.vim'               " Favourite color scheme
 Plugin 'vim-scripts/ifdef-highlighting'         " Bloody useful for C
 Plugin 'freitass/todo.txt-vim'                  " todo.txt plugin
 Plugin 'istepura/vim-toolbar-icons-silk'        " Better toolbar icons
+Plugin 'vimwiki/vimwiki'                        " My own personal wiki
 
 "Type :PluginInstall
 

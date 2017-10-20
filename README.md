@@ -55,6 +55,7 @@ Other plugins I use are:
 * ifdef-highlighting - useful for C: https://github.com/vim-scripts/ifdef-highlighting
 * Todo.txt (todotxt.com) list plugin: https://github.com/freitass/todo.txt-vim
 * Silk Toolbar Icons (nicer): https://github.com/istepura/vim-toolbar-icons-silk
+* VimWiki - Wiki Note system: https://github.com/vimwiki/vimwiki
 
 For full VIM power mad crazyness install
 * CTags: http://ctags.sourceforge.net/

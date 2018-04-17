@@ -11,16 +11,21 @@ filetype off
 " Invoke Vundle for Vim Plugin Management
 " https://github.com/VundleVim/Vundle.vim
 "
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim
-call vundle#begin('$HOME/vimfiles/bundle')
+if has('win32')
+    set rtp+=$HOME/vimfiles/bundle/Vundle.vim
+    call vundle#begin('$HOME/vimfiles/bundle')
+
+    Plugin 'istepura/vim-toolbar-icons-silk'    " Better toolbar icons 4 Windows
+else
+    set rtp+=$HOME/.vim/bundle/Vundle.vim
+    call vundle#begin('$HOME/.vim/bundle')
+endif
 
 " Let Vundle manage Vundle, required.
 Plugin 'VundleVim/Vundle.Vim'                   " Keep Vundle upto date
 Plugin 'ctrlpvim/ctrlp.vim'                     " CtrlP FTW!
 Plugin 'vim-scripts/xoria256.vim'               " Favourite color scheme
 Plugin 'vim-scripts/ifdef-highlighting'         " Bloody useful for C
-Plugin 'freitass/todo.txt-vim'                  " todo.txt plugin
-Plugin 'istepura/vim-toolbar-icons-silk'        " Better toolbar icons
 
 "Type :PluginInstall
 

@@ -11,17 +11,21 @@ filetype off
 " Invoke Vundle for Vim Plugin Management
 " https://github.com/VundleVim/Vundle.vim
 "
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim
-call vundle#begin('$HOME/vimfiles/bundle')
+if has('win32')
+    set rtp+=$HOME/vimfiles/bundle/Vundle.vim
+    call vundle#begin('$HOME/vimfiles/bundle')
+
+    Plugin 'istepura/vim-toolbar-icons-silk'    " Better toolbar icons 4 Windows
+else
+    set rtp+=$HOME/.vim/bundle/Vundle.vim
+    call vundle#begin('$HOME/.vim/bundle')
+endif
 
 " Let Vundle manage Vundle, required.
 Plugin 'VundleVim/Vundle.Vim'                   " Keep Vundle upto date
 Plugin 'ctrlpvim/ctrlp.vim'                     " CtrlP FTW!
 Plugin 'vim-scripts/xoria256.vim'               " Favourite color scheme
 Plugin 'vim-scripts/ifdef-highlighting'         " Bloody useful for C
-Plugin 'freitass/todo.txt-vim'                  " todo.txt plugin
-Plugin 'istepura/vim-toolbar-icons-silk'        " Better toolbar icons
-Plugin 'vimwiki/vimwiki'                        " My own personal wiki
 
 "Type :PluginInstall
 
@@ -145,8 +149,34 @@ endif
 "
 if has('win32')
 
-  source $VIMRUNTIME/mswin.vim      " Go with the flow.
-  behave mswin
+  "source $VIMRUNTIME/mswin.vim      " Go with the flow.
+  "In Vim 8.0 CTRL-F became :promptfind, which I detest. so I now I roll 
+  "a more 'pure' vim experience on windows. I also did away with windows
+  "control keys for copy, cut, paste, etc...
+
+  " backspace and cursor keys wrap to previous/next line
+  set backspace=indent,eol,start whichwrap+=<,>,[,]
+
+  " backspace in Visual mode deletes selection
+  vnoremap <BS> d
+
+  " Use CTRL-S for saving, also in Insert mode
+  noremap <C-S>     :update<CR>
+  vnoremap <C-S>    <C-C>:update<CR>
+  inoremap <C-S>    <C-O>:update<CR>
+
+  " Alt-Space is System menu
+  if has("gui")
+      noremap <M-Space> :simalt ~<CR>
+      inoremap <M-Space> <C-O>:simalt ~<CR>
+      cnoremap <M-Space> <C-C>:simalt ~<CR>
+  endif
+
+  " CTRL-F4 is Close window
+  noremap <C-F4> <C-W>c
+  inoremap <C-F4> <C-O><C-W>c
+  cnoremap <C-F4> <C-C><C-W>c
+  onoremap <C-F4> <C-C><C-W>c
 
 else  " Assume this is Linux
     

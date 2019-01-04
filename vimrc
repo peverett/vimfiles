@@ -149,8 +149,34 @@ endif
 "
 if has('win32')
 
-  source $VIMRUNTIME/mswin.vim      " Go with the flow.
-  behave mswin
+  "source $VIMRUNTIME/mswin.vim      " Go with the flow.
+  "In Vim 8.0 CTRL-F became :promptfind, which I detest. so I now I roll 
+  "a more 'pure' vim experience on windows. I also did away with windows
+  "control keys for copy, cut, paste, etc...
+
+  " backspace and cursor keys wrap to previous/next line
+  set backspace=indent,eol,start whichwrap+=<,>,[,]
+
+  " backspace in Visual mode deletes selection
+  vnoremap <BS> d
+
+  " Use CTRL-S for saving, also in Insert mode
+  noremap <C-S>     :update<CR>
+  vnoremap <C-S>    <C-C>:update<CR>
+  inoremap <C-S>    <C-O>:update<CR>
+
+  " Alt-Space is System menu
+  if has("gui")
+      noremap <M-Space> :simalt ~<CR>
+      inoremap <M-Space> <C-O>:simalt ~<CR>
+      cnoremap <M-Space> <C-C>:simalt ~<CR>
+  endif
+
+  " CTRL-F4 is Close window
+  noremap <C-F4> <C-W>c
+  inoremap <C-F4> <C-O><C-W>c
+  cnoremap <C-F4> <C-C><C-W>c
+  onoremap <C-F4> <C-C><C-W>c
 
 else  " Assume this is Linux
     

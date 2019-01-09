@@ -6,6 +6,10 @@ There are many like them, but these ones are mine!
 
 Download it from here: http://www.vim.org/
 
+## HACK - a superior font for code editing
+Hack is a very nice fixed width font just for coding. Download an install it first.
+* Hack font: https://github.com/source-foundry/Hack
+
 ## Configuration
 
 1. VIM looks in various places for the ```vimrc``` and ```gvimrc``` files. Use 
@@ -53,9 +57,8 @@ Other plugins I use are:
 * CTRLp.vim - fuzzy file finder and buffer navigation: https://kien.github.io/ctrlp.vim/
 * Xoria256 - my favorite color scheme: https://github.com/vim-scripts/xoria256.vim
 * ifdef-highlighting - useful for C: https://github.com/vim-scripts/ifdef-highlighting
-* Todo.txt (todotxt.com) list plugin: https://github.com/freitass/todo.txt-vim
 * Silk Toolbar Icons (nicer): https://github.com/istepura/vim-toolbar-icons-silk
-* VimWiki - Wiki Note system: https://github.com/vimwiki/vimwiki
+
 
 For full VIM power mad crazyness install
 * CTags: http://ctags.sourceforge.net/

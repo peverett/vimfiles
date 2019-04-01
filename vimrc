@@ -26,12 +26,19 @@ Plugin 'VundleVim/Vundle.Vim'                   " Keep Vundle upto date
 Plugin 'ctrlpvim/ctrlp.vim'                     " CtrlP FTW!
 Plugin 'vim-scripts/xoria256.vim'               " Favourite color scheme
 Plugin 'vim-scripts/ifdef-highlighting'         " Bloody useful for C
+Plugin 'ludovicchabant/vim-gutentags'           " Gutentags for managed Ctags
+Plugin 'vim-utils/vim-cscope'                   " Cscope key mappings.
+Plugin 'vim-scripts/taglist.vim'                " Taglist plugin
 
 "Type :PluginInstall
 
 " All plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
+
+"
+" For Gutentags, define .root as a specific project root.
+let g:gutentags_project_root=['.root'] 
 
 "
 " Look and feel 
@@ -185,5 +192,8 @@ else  " Assume this is Linux
 
 endif
 
-" Map the '\' key as the 'localleader' for the todo plugin.
-let maplocalleader="\\"
+"
+" My specific key mappings
+"
+let maplocalleader="\\"                     " Local leader
+map <F12> :TlistToggle<CR>

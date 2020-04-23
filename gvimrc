@@ -2,15 +2,14 @@
 " This is my gvimrc, there are many like it but this one is mine.
 "
 
-" https://github.com/vim-scripts/xoria256.vim
-colorscheme xoria256            " Nice color scheme
-
-set guifont=hack:h11:cANSI      " https://github.com/source-foundry/Hack
-"set guifont=consolas:h10:cANSI  " Nice GUI font on WIN32
-"set go-=T                       " Don't like the tool buttons.
+set guifont=hack:h10:cANSI      " https://github.com/source-foundry/Hack
 set go-=r                       " Don't like the right scroll bar.
 set go-=L                       " Don't like the left scroll bar either.
 set go-=t                       " No tearoff menu entries.
 
 set columns=85
 set lines=40
+
+" Go full screen after GUI start-up for any file.
+autocmd GUIEnter * simalt ~x
+

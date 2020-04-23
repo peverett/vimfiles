@@ -58,9 +58,12 @@ Other plugins I use are:
 * Xoria256 - my favorite color scheme: https://github.com/vim-scripts/xoria256.vim
 * ifdef-highlighting - useful for C: https://github.com/vim-scripts/ifdef-highlighting
 * Silk Toolbar Icons (nicer): https://github.com/istepura/vim-toolbar-icons-silk
-
+* Splash screen for vim: https://github.com/mhinz/vim-startify 
+* Cooler Status line: https://github.com/vim-airline/vim-airline
+* With funkier colours: https://github.com/vim-airline/vim-airline-themes
 
 For full VIM power mad crazyness install
 * CTags: http://ctags.sourceforge.net/
 * cscope - win32 build: https://code.google.com/archive/p/cscope-win32/downloads
+* taglist - https://github.com/vim-scripts/taglist.vim
 

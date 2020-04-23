@@ -7,7 +7,7 @@
 set nocompatible
 filetype off
 
-" 
+"
 " Invoke Vundle for Vim Plugin Management
 " https://github.com/VundleVim/Vundle.vim
 "
@@ -24,11 +24,15 @@ endif
 " Let Vundle manage Vundle, required.
 Plugin 'VundleVim/Vundle.Vim'                   " Keep Vundle upto date
 Plugin 'ctrlpvim/ctrlp.vim'                     " CtrlP FTW!
-Plugin 'vim-scripts/xoria256.vim'               " Favourite color scheme
 Plugin 'vim-scripts/ifdef-highlighting'         " Bloody useful for C
-Plugin 'ludovicchabant/vim-gutentags'           " Gutentags for managed Ctags
-Plugin 'vim-utils/vim-cscope'                   " Cscope key mappings.
-Plugin 'vim-scripts/taglist.vim'                " Taglist plugin
+"Plugin 'ludovicchabant/vim-gutentags'           " Gutentags for managed Ctags
+"Plugin 'vim-utils/vim-cscope'                   " Cscope key mappings.
+"Plugin 'vim-scripts/taglist.vim'                " Taglist plugin
+Plugin 'vim-scripts/xoria256.vim'               " Favourite color scheme
+"Plugin 'cormacrelf/vim-colors-github'
+Plugin 'mhinz/vim-startify'                     " Splash screen for vim
+Plugin 'vim-airline/vim-airline'                " Cooler Status line
+Plugin 'vim-airline/vim-airline-themes'         " With funkier colours
 
 "Type :PluginInstall
 
@@ -38,14 +42,14 @@ filetype plugin indent on
 
 "
 " For Gutentags, define .root as a specific project root.
-let g:gutentags_project_root=['.root'] 
+"let g:gutentags_project_root=['.root']
 
 "
-" Look and feel 
-" 
+" Look and feel
+"
 if v:version > 703
   set colorcolumn=80                " Nice to know where col 80 is.
-endif 
+endif
 
 set number                          " Show line numbers (left hand side).
 set showcmd                         " Show command in bottom bar.
@@ -66,13 +70,13 @@ nnoremap gV `[v`]
 set tabstop=4                       " Number of visual spaces per TAB
 set softtabstop=4                   " Number of spaces in tab when editing
 set expandtab                       " Always use spaces instead of <TAB>
-set shiftwidth=4                    " Automatic indentation is 4-spaces. 
+set shiftwidth=4                    " Automatic indentation is 4-spaces.
 
 " Incremental search - VIM's killer feature
 set incsearch                       " Turn on incremental search
 set smartcase                       " Only case-sensitive if you use captials
 
-" 
+"
 " Backup and undo options
 "
 set backup                          " Keep a backup file.
@@ -157,7 +161,7 @@ endif
 if has('win32')
 
   "source $VIMRUNTIME/mswin.vim      " Go with the flow.
-  "In Vim 8.0 CTRL-F became :promptfind, which I detest. so I now I roll 
+  "In Vim 8.0 CTRL-F became :promptfind, which I detest. so I now I roll
   "a more 'pure' vim experience on windows. I also did away with windows
   "control keys for copy, cut, paste, etc...
 
@@ -186,14 +190,24 @@ if has('win32')
   onoremap <C-F4> <C-C><C-W>c
 
 else  " Assume this is Linux
-    
+
   " Allow backspacing over everything in insert mode.
   set backspace=indent,eol,start
 
 endif
 
 "
+" Color Scheme for Terminal and GUI
+"
+colorscheme xoria256
+
+"
 " My specific key mappings
 "
 let maplocalleader="\\"                     " Local leader
-map <F12> :TlistToggle<CR>
+
+map <F3> :Rg -tc "\b<cword>\b"<CR>          " Search word in C files
+map <S-F3> :Rg "\b<cword>\b"<CR>            " Search word in any file
+map <F9> :copen<CR>                         " Open Quickfix Window
+map <F10> :cclose<CR>                       " Close Quickfix Window
+map <F12> :TlistToggle<CR>                  " Toggle Tag List in Left split

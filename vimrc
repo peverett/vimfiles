@@ -7,42 +7,7 @@
 set nocompatible
 filetype off
 
-"
-" Invoke Vundle for Vim Plugin Management
-" https://github.com/VundleVim/Vundle.vim
-"
-if has('win32')
-    set rtp+=$HOME/vimfiles/bundle/Vundle.vim
-    call vundle#begin('$HOME/vimfiles/bundle')
-
-    Plugin 'istepura/vim-toolbar-icons-silk'    " Better toolbar icons 4 Windows
-else
-    set rtp+=$HOME/.vim/bundle/Vundle.vim
-    call vundle#begin('$HOME/.vim/bundle')
-endif
-
-" Let Vundle manage Vundle, required.
-Plugin 'VundleVim/Vundle.Vim'                   " Keep Vundle upto date
-Plugin 'ctrlpvim/ctrlp.vim'                     " CtrlP FTW!
-Plugin 'vim-scripts/ifdef-highlighting'         " Bloody useful for C
-"Plugin 'ludovicchabant/vim-gutentags'           " Gutentags for managed Ctags
-"Plugin 'vim-utils/vim-cscope'                   " Cscope key mappings.
-"Plugin 'vim-scripts/taglist.vim'                " Taglist plugin
-Plugin 'vim-scripts/xoria256.vim'               " Favourite color scheme
-"Plugin 'cormacrelf/vim-colors-github'
-Plugin 'mhinz/vim-startify'                     " Splash screen for vim
-Plugin 'vim-airline/vim-airline'                " Cooler Status line
-Plugin 'vim-airline/vim-airline-themes'         " With funkier colours
-
-"Type :PluginInstall
-
-" All plugins must be added before the following line
-call vundle#end()
 filetype plugin indent on
-
-"
-" For Gutentags, define .root as a specific project root.
-"let g:gutentags_project_root=['.root']
 
 "
 " Look and feel

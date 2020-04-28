@@ -16,3 +16,6 @@
 [submodule "pack/pev/start/vim-toolbar-icons-silk"]
 	path = pack/pev/start/vim-toolbar-icons-silk
 	url = https://github.com/istepura/vim-toolbar-icons-silk.git
+[submodule "pack/pev/start/vim-ripgrep"]
+	path = pack/pev/start/vim-ripgrep
+	url = https://github.com/jremmen/vim-ripgrep.git

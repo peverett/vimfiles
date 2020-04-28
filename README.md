@@ -30,33 +30,45 @@ C:\Users\Name
 
 C:\Users\Name
 > git clone https://github.com/peverett/vimfiles .\vimfiles
-
-C:\Users\Name
-> git clone https://github.com/VundleVim/Vundle.vim.git .\vimfiles\bundle\Vundle.vim 
-
-C:\Users\Name
-> vim +PluginInstall +qall
 ```
 
-## Windows Specific Settings
-The example Vundle setup for the plugin, on github, is for Linux and uses the 
-```~/.vim``` directory . For MS Windows, change the ```vimrc``` 
-setup to invoke Vundle as follows:
+
+## Plugins 
+
+I am using the VIM 8.x native package manager, and so the plugins I use
+are now submodules to this repo.
+
+My package manager directories are
+```
+~/vimfiles/pack/pev/start
+~/vimfiles/pack/pev/opt
 ```
 
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim
-call vundle#begin('$HOME/vimfiles/bundle')
-
+To add a plugin from github (using vim-startify as an example):
+```
+cd ~/vimfiles
+git submodule add https://github.com/mhinz/vim-startify.git ./pack/pev/start/vim-startify
+git add .gitmodules ./pack/pev/start/vim_startify
+git commit -m "Added submodule mhinz/vim-startify.git"
 ```
 
-## Plugins & Tools
+To update the submodule packages
+```
+cd ~/vimfiles
+git submodule update --remote --merge
+git commit -m "Updating submodules."
+```
 
-Obviously, the Vundle Plugin is primary - https://github.com/VundleVim/Vundle.Vim
+To remove a plugin
+```
+cd ~/vimfiles
+git submodule deinit ./pack/pev/start/vim-startify
+git rm ./pack/pev/start/vim-startify
+git commit -m "Removed submodule mhinz/vim-startify.git"
+```
 
-Other plugins I use are:
-* CTRLp.vim - fuzzy file finder and buffer navigation: https://kien.github.io/ctrlp.vim/
+Plugins I use
 * Xoria256 - my favorite color scheme: https://github.com/vim-scripts/xoria256.vim
-* ifdef-highlighting - useful for C: https://github.com/vim-scripts/ifdef-highlighting
 * Silk Toolbar Icons (nicer): https://github.com/istepura/vim-toolbar-icons-silk
 * Splash screen for vim: https://github.com/mhinz/vim-startify 
 * Cooler Status line: https://github.com/vim-airline/vim-airline

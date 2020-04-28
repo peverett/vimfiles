@@ -10,3 +10,6 @@
 [submodule "pack/pev/opt/xoria256.vim"]
 	path = pack/pev/opt/xoria256.vim
 	url = https://github.com/vim-scripts/xoria256.vim.git
+[submodule "pack/pev/start/taglist.vim"]
+	path = pack/pev/start/taglist.vim
+	url = https://github.com/vim-scripts/taglist.vim.git

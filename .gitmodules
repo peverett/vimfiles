@@ -13,3 +13,6 @@
 [submodule "pack/pev/start/taglist.vim"]
 	path = pack/pev/start/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "pack/pev/start/vim-toolbar-icons-silk"]
+	path = pack/pev/start/vim-toolbar-icons-silk
+	url = https://github.com/istepura/vim-toolbar-icons-silk.git

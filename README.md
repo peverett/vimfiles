@@ -20,8 +20,7 @@ Variable.
 4. Create a subdirectory for your vim config files
     * ```\vimfiles``` - on Windows
     * ```/.vim``` - on Linux
-5. Clone this repo and the Vundle Plugin there.
-6. Run vim the first time to install all the plugins.
+5. Clone this repo there, and all the submodules.
 
 The following example is for Windows shell:
 ```

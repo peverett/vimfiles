@@ -66,6 +66,17 @@ git rm ./pack/pev/start/vim-startify
 git commit -m "Removed submodule mhinz/vim-startify.git"
 ```
 
+When cloning to a new installation, don't forget to include the submodules.
+```
+git clone <remote-repo-url>
+git submodule update --init
+```
+
+If you do, you can use this command
+```
+git submodule update --init --recursive
+```
+
 Plugins I use
 * Xoria256 - my favorite color scheme: https://github.com/vim-scripts/xoria256.vim
 * Silk Toolbar Icons (nicer): https://github.com/istepura/vim-toolbar-icons-silk
